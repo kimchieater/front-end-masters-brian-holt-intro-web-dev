@@ -8,8 +8,79 @@
   </head>
   <body>
     <div class="container-logo">
-      <a href="./index.html">Coffee Masters</a>
+      <a class="logo" href="./index.html">Coffee Masters</a>
     </div>
-    <div class="payment-container"></div>
+    <div class="payment-container">
+      <div class="payment-items item-style">
+        <h2 class="payment-h2">ITEMS</h2>
+        <div class="payment-items-info">
+          <p>1x</p>
+          <div class="longer-item">
+            <p>Cappuccino</p>
+            <p class="payment-milk">Lite foam</p>
+          </div>
+          <p>$3.35</p>
+        </div>
+
+        <div class="payment-items-info">
+          <p>1x</p>
+          <div class="longer-item">
+            <p>Cappuccino</p>
+            <p class="payment-milk">Lite foam</p>
+            <p class="payment-milk">Double espresso</p>
+          </div>
+
+          <p>$3.35</p>
+        </div>
+
+        <div class="payment-items-info">
+          <p>1x</p>
+          <div class="longer-item">
+            <p>Croissant</p>
+            <p class="payment-milk">butter</p>
+          </div>
+
+          <p>$3.35</p>
+        </div>
+      </div>
+      <div class="item-style item-name">
+        <div class="item-name-section">
+          <h2>Name</h2>
+          <div class="name-info-group">
+            <label for="name" class="name-info-label">Name for the order</label>
+            <input id="name" class="name-info-input" />
+          </div>
+        </div>
+        <div class="item-style payment">
+          <h2>Payment</h2>
+          <div class="name-info-group">
+            <label for="payment-card-info" class="name-info-label"
+              >Card Number</label
+            >
+            <input id="payment-card-info" class="name-info-input" />
+          </div>
+          <div class="ccv-info">
+            <label for="ccv-info-number" class="ccv-info-label">CCV</label>
+            <input id="ccv-info-number" class="ccv-info-input" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-info-group">
+      <div class="total-info">
+        <p>Subtotal:</p>
+        <p>$9.65</p>
+      </div>
+      <div class="total-info">
+        <p>Tax:</p>
+        <p>$0.82</p>
+      </div>
+      <div class="total-info total">
+        <p><span>Total:</span></p>
+        <p>$10.47</p>
+      </div>
+    </div>
+    <div class="div-button"><button>Place Order</button></div>
   </body>
 </html>

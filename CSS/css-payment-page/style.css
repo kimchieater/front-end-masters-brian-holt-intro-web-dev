@@ -7,18 +7,133 @@
 .container-logo {
   padding: 20px;
   background-color: rgb(41, 12, 12);
-  text-align: center;
-  color: white;
+  display: flex;
+  justify-content: center;2
 }
 
 .logo {
   cursor: pointer;
   color: white;
-  display: flex;
-  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .payment-container {
-  background-color: red;
-  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100vw;
+}
+
+.item-style {
+  background-color: bisque;
+  border-radius: 9px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 40%;
+}
+
+.payment-h2 {
+  color: rgb(41, 12, 12);
+}
+
+.payment-items-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(197, 166, 128);
+}
+.payment-items-info:last-child {
+  border: none;
+}
+
+.payment-milk {
+  color: rgb(41, 12, 12);
+  margin-top: 5px;
+}
+
+.longer-item {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.name-info-group {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.name-info-input {
+  padding: 8px;
+  background-color: bisque;
+  width: 400px;
+  border-radius: 20px;
+  color: rgb(41, 12, 12);
+}
+
+.name-info-label {
+  position: absolute;
+  left: 25px;
+  top: -10px;
+  background-color: bisque;
+}
+
+.payment {
+  padding: 0;
+}
+
+.ccv-info {
+  margin-top: 10px;
+  position: relative;
+}
+
+.ccv-info-label {
+  position: absolute;
+  left: 25px;
+  top: -10px;
+  background-color: bisque;
+}
+
+.ccv-info-input {
+  background-color: bisque;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.total-info-group {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-info {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.total {
+  margin-top: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.div-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.div-button button{
+  width:1030px;
+  background-color: rgb(201, 170, 133);
+  border:none;
+  border-radius: 20px;
+  padding:20px;
+  cursor: pointer;
 }
