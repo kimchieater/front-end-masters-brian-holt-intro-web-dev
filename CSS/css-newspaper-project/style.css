@@ -4,4 +4,7 @@
 
 .main-logo {
   font-style: italic;
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
 }
