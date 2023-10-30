@@ -1,5 +1,5 @@
-const monthlyRent = 500;
+let arr = [1, 2, 3, 4];
 
-const yearlyRent = monthlyRent * 12;
-
-console.log(yearlyRent);
+arr.forEach((a) => {
+  console.log(a);
+});

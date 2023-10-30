@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.calculator-group {
+  display: grid;
+  grid-template-areas:
+    "result  result  result result"
+    "C  C  backspace division"
+    "seven eight nine x"
+    "four five six minus"
+    "one two three plus"
+    "zero zero zero eqaul";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 500px;
+  height: 700px;
+}
+
+.result {
+  grid-area: result;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.result > p {
+  padding-right: 20px;
+  margin: 0;
+  font-size: 5rem;
+}
+
+.calculator-group > button {
+  border: 1px solid black;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: rgb(184, 184, 184);
+}
+
+.calculator-group > button:hover {
+  background-color: rgb(218, 218, 218);
+}
+
+.calculator-group > .orange {
+  background-color: rgb(209, 136, 68);
+  color: white;
+}
+
+.calculator-group > .orange:hover {
+  background-color: rgb(206, 152, 102);
+}
+.C {
+  grid-area: C;
+}
+
+.backspace {
+  grid-area: backspace;
+}
+
+.division {
+  grid-area: division;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+.x {
+  grid-area: x;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.zero {
+  grid-area: zero;
+}
