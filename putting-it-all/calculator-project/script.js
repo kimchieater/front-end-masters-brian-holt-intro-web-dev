@@ -1,6 +1,7 @@
 let result = document.querySelector(".result");
 let button = document.querySelectorAll("button");
 let groupButton = document.querySelector(".calculator-group");
+let resultNumbers = "";
 let firstDigits = "";
 let secondDigits = "";
 let operator = "";
@@ -12,24 +13,56 @@ let operator = "";
 for (let i = 0; i < button.length; i++) {
   button[i].addEventListener("click", function () {
     if (i === 0) {
-      buttonC();
-    } else if (i === 1 || i === 6 || i === 10 || i === 14 || i === 16) {
+      buttonClear();
+    } else if (i === 1 || i === 6 || i === 10) {
       return;
     } else if (i === 2) {
-      result.innerHTML = 0;
+      divider();
+    } else if (i === 16) {
+      doCalculation();
+    } else if (i === 14) {
+      addition();
     } else {
-      console.log(button[i].innerHTML);
-      firstDigits += button[i].innerHTML;
-      result.style.fontSize = "5rem";
-      result.style.paddingRight = "20px";
-
-      result.innerHTML = +firstDigits;
+      buttonPressed(i);
     }
   });
 }
 
-function buttonC() {
+function buttonClear() {
+  resultNumbers = "";
   firstDigits = "";
   secondDigits = "";
   result.innerHTML = 0;
+}
+
+function addition() {
+  result.innerHTML = 0;
+  firstDigits = resultNumbers;
+  resultNumbers = "";
+  operator = "+";
+}
+
+function subtraction() {}
+
+function divider() {
+  result.innerHTML = 0;
+  firstDigits = resultNumbers;
+  resultNumbers = "";
+  operator = "/";
+}
+
+function buttonPressed(i) {
+  resultNumbers += button[i].innerHTML;
+  result.style.fontSize = "5rem";
+  result.style.paddingRight = "20px";
+  result.innerHTML = resultNumbers;
+}
+
+function doCalculation() {
+  secondDigits = resultNumbers;
+  if (operator === "/") {
+    result.innerHTML = Math.round(+firstDigits / +secondDigits);
+  } else if (operator === "+") {
+    result.innerHTML = Math.round(+firstDigits + +secondDigits);
+  }
 }
