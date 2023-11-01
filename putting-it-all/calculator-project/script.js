@@ -14,7 +14,7 @@ for (let i = 0; i < button.length; i++) {
   button[i].addEventListener("click", function () {
     if (i === 0) {
       buttonClear();
-    } else if (i === 1 || i === 6 || i === 10) {
+    } else if (i === 1) {
       return;
     } else if (i === 2) {
       divider();
@@ -22,6 +22,10 @@ for (let i = 0; i < button.length; i++) {
       doCalculation();
     } else if (i === 14) {
       addition();
+    } else if (i === 10) {
+      subtraction();
+    } else if (i === 6) {
+      multiple();
     } else {
       buttonPressed(i);
     }
@@ -42,7 +46,19 @@ function addition() {
   operator = "+";
 }
 
-function subtraction() {}
+function subtraction() {
+  result.innerHTML = 0;
+  firstDigits = resultNumbers;
+  resultNumbers = "";
+  operator = "-";
+}
+
+function multiple() {
+  result.innerHTML = 0;
+  firstDigits = resultNumbers;
+  resultNumbers = "";
+  operator = "*";
+}
 
 function divider() {
   result.innerHTML = 0;
@@ -62,7 +78,23 @@ function doCalculation() {
   secondDigits = resultNumbers;
   if (operator === "/") {
     result.innerHTML = Math.round(+firstDigits / +secondDigits);
+    secondDigits = "";
+    firstDigits = "";
+    resultNumbers = "";
   } else if (operator === "+") {
     result.innerHTML = Math.round(+firstDigits + +secondDigits);
+    secondDigits = "";
+    firstDigits = "";
+    resultNumbers = "";
+  } else if (operator === "-") {
+    result.innerHTML = Math.round(+firstDigits - +secondDigits);
+    secondDigits = "";
+    firstDigits = "";
+    resultNumbers = "";
+  } else if (operator === "*") {
+    result.innerHTML = Math.round(+firstDigits * +secondDigits);
+    secondDigits = "";
+    firstDigits = "";
+    resultNumbers = "";
   }
 }

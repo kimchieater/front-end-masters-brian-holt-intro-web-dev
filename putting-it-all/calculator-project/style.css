@@ -16,7 +16,7 @@ body {
   grid-template-areas:
     "result  result  result result"
     "C  C  backspace division"
-    "seven eight nine x"
+    "seven eight nine multiple"
     "four five six minus"
     "one two three plus"
     "zero zero zero eqaul";
